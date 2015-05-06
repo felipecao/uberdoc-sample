@@ -1,5 +1,6 @@
 package uberdoc.sample
 
+import com.uberall.uberdoc.annotation.UberDocController
 import com.uberall.uberdoc.annotation.UberDocError
 import com.uberall.uberdoc.annotation.UberDocErrors
 import com.uberall.uberdoc.annotation.UberDocHeader
@@ -23,6 +24,7 @@ import grails.transaction.Transactional
         @UberDocHeader(name = "publicToken", sampleValue = "all methods in this file should send a header param", description = "this param should be sent within the headers"),
         @UberDocHeader(name = "other token", sampleValue = "just some other token that every method should send", description = "this param should also be sent within the headers")
 ])
+@UberDocController
 @Transactional(readOnly = true)
 class PhodController {
 
